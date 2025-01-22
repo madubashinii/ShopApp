@@ -1,0 +1,70 @@
+.main-toolbar {
+  padding: 10px 20px;
+  background-color: rgba(214, 217, 220, 0.06);
+  font-family: "Noto Serif", serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+.app-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links button{
+  margin-left: 15px;
+  font-family: "Noto Serif", serif;
+  font-weight: bolder;
+  font-size: 1.1rem;
+}
+
+.nav-links button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.login {
+  background: transparent;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  margin-left: auto;
+}
+.login-button {
+  margin-left: auto;
+}
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+  .spacer, .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+}

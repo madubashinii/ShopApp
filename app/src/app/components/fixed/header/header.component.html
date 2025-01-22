@@ -1,0 +1,17 @@
+<mat-toolbar>
+  <a class="logo">
+    <img src="assets/logo.png" alt="Logo" />
+  </a>
+
+  <button class="cart-btn"  mat-icon-button routerLink="/cart" routerLinkActive="active">
+    <mat-icon >shopping_cart</mat-icon>
+    <span matBadge={{totalQty}}></span>
+  </button>
+
+  <div class="search-bar-container">
+    <form class="search-form">
+      <mat-icon>search</mat-icon>
+      <input matInput placeholder="Search..." aria-label="Search" />
+    </form>
+  </div>
+</mat-toolbar>

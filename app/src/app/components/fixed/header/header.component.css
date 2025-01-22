@@ -1,0 +1,95 @@
+mat-toolbar {
+  padding: 0.5rem 2rem;
+  background: linear-gradient(to left, #83bbd9, #d0ccef);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Noto Serif", serif;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+}
+
+.cart-btn {
+  position: relative;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.3s;
+  background-color: #f1f1f1;
+  margin-left: 10px;
+}
+
+.cart-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mat-icon {
+  font-size: 24px;
+  color: #3f51b5;
+}
+
+.cart-btn span {
+  font-size: 10px;
+}
+
+.search-bar-container {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  border-radius: 25px;
+  padding: 5px 15px;
+  width: 250px;
+  transition: all 0.3s ease;
+  margin-left: 1rem;
+}
+
+.search-form:hover {
+  background-color: #e0e0e0;
+  width: 280px;
+}
+
+.search-form mat-icon {
+  font-size: 20px;
+  color: #555;
+  margin-right: 10px;
+}
+
+.search-form input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  color: #555;
+  width: 100%;
+  padding: 6px 0;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  mat-toolbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+
+  .search-form {
+    width: 200px;
+  }
+
+  .search-form input {
+    font-size: 14px;
+  }
+}

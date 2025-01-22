@@ -1,0 +1,16 @@
+<div *ngIf="product" class="product-details">
+  <div class="product-image">
+    <img [src]="product.productImg1" alt="{{ product.productName }}" />
+  </div>
+  <div class="product-info">
+    <h2>{{ product.productName }}</h2>
+    <p><strong>Brand:</strong> {{ product.productBrand }}</p>
+    <p><strong class="price">Price:</strong> ${{ product.productPrice }}</p>
+    <p><strong>Color:</strong> {{ product.color }}</p>
+    <p class="details"><strong>Details:</strong> {{ product.productDetails }}</p>
+    <div class="product-buttons">
+      <button mat-button (click)="goBack()">Go Back</button>
+      <button mat-button class="add-to-cart" (click)="addToCart(product)">Add to Cart</button>
+    </div>
+  </div>
+</div>
