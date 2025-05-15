@@ -1,54 +1,54 @@
-/* Container */
+/* Container Styling */
 .form-container {
   max-width: 400px;
-  margin: 80px auto;
+  margin: 60px auto;
   padding: 2rem;
   background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* Title */
-.form-title {
+/* Form Heading */
+.form-container h2 {
   text-align: center;
-  font-size: 26px;
   margin-bottom: 1.5rem;
   color: #333;
-  font-weight: 600;
+  font-size: 24px;
 }
 
-/* Inputs */
+/* Input Fields */
 input {
   width: 100%;
   padding: 12px;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  margin: 10px 0;
   font-size: 16px;
-  transition: border-color 0.2s;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
 }
 
 input:focus {
   border-color: #4caf50;
   outline: none;
-  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
 }
 
-/* Button */
+/* Submit Button */
 button {
   width: 100%;
   padding: 12px;
   background-color: #4caf50;
   color: white;
-  font-size: 16px;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
+  font-size: 16px;
   cursor: pointer;
+  margin-top: 10px;
   transition: background-color 0.3s ease;
 }
 
-button:hover:not(:disabled) {
-  background-color: #43a047;
+button:hover {
+  background-color: #45a049;
 }
 
 button:disabled {
@@ -56,19 +56,18 @@ button:disabled {
   cursor: not-allowed;
 }
 
-/* Switch link */
+/* Link to switch to login */
 .switch-link {
-  margin-top: 1rem;
+  display: block;
+  margin-top: 15px;
   text-align: center;
   font-size: 14px;
-  color: #666;
-  cursor: pointer;
 }
 
 .switch-link a {
   color: #007bff;
   text-decoration: none;
-  font-weight: 500;
+  cursor: pointer;
 }
 
 .switch-link a:hover {
@@ -79,14 +78,15 @@ button:disabled {
 @media (max-width: 480px) {
   .form-container {
     padding: 1.5rem;
-    margin: 40px 1rem;
+    margin-top: 40px;
   }
 
-  .form-title {
-    font-size: 22px;
+  h2 {
+    font-size: 20px;
   }
 
-  input, button {
-    font-size: 15px;
+  input,
+  button {
+    font-size: 14px;
   }
 }

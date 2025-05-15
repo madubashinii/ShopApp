@@ -1,15 +1,15 @@
-<div class="login-container">
-  <h2>Login</h2>
-  <form (ngSubmit)="onLogin()" #loginForm="ngForm">
-    <div>
-      <label for="username">Username</label>
-      <input type="text" id="username" name="username" [(ngModel)]="username" required />
-    </div>
-    <div>
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" [(ngModel)]="password" required />
-    </div>
-    <button type="submit" [disabled]="!loginForm.valid">Login</button>
+<div class="form-container">
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <h2 class="form-title">Login</h2>
+
+    <input formControlName="username" placeholder="Username" type="text" />
+    <input formControlName="password" placeholder="Password" type="password" />
+
+    <button type="submit" [disabled]="loginForm.invalid">Login</button>
+
+    <p class="switch-link">
+      Don't have an account?
+      <a routerLink="/register" routerLinkActive="active">Register</a>
+    </p>
   </form>
-  <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
 </div>
