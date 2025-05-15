@@ -9,15 +9,18 @@ import {DashboardComponent} from './admin/dashboard/dashboard.component';
 import {CategoryPageComponent} from './components/category-page/category-page.component';
 import {ProductDetailComponent} from './components/product-detail/product-detail.component';
 import {ProductComponent} from './components/product/product.component';
+import {RegisterComponent} from './admin/register/register.component';
+import {AuthGuard} from './admin/guard/auth.guard';
 
 export const routes: Routes = [
-  {path: '', redirectTo: '', component: HomeComponent, pathMatch: 'full'},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'register', component: RegisterComponent },
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomeComponent},
   {path: 'categories', component: CategoryComponent},
   {path: 'checkout', component: CheckoutComponent},
-  {path: 'cart', component: CartComponent},
-  {path: 'checkout', component: CheckoutComponent},
+  {path: 'cart', component: CartComponent , canActivate: [AuthGuard] },
+  {path: 'checkout', component: CheckoutComponent , canActivate: [AuthGuard] },
   {path: 'dashboard', component: DashboardComponent},
   {path: 'category/:categoryId', component: CategoryPageComponent},
   {path: 'product/:id', component: ProductDetailComponent},

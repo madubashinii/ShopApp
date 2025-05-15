@@ -1,0 +1,15 @@
+<div class="form-container">
+  <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+    <h2>Register</h2>
+
+    <input formControlName="username" placeholder="Username" />
+    <input formControlName="email" placeholder="Email" />
+    <input formControlName="password" type="password" placeholder="Password" />
+
+    <button type="submit" [disabled]="registerForm.invalid">Register</button>
+
+    <span class="switch-link">
+      <a routerLink="/login" routerLinkActive="active">Already have an account? Login</a>
+    </span>
+  </form>
+</div>
