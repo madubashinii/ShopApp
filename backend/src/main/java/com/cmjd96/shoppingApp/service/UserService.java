@@ -20,19 +20,16 @@ public class UserService {
     }
 
     public boolean login(User user) {
-        // Check if admin credentials are correct
         if ("admin".equals(user.getUsername()) && "admin123".equals(user.getPassword())) {
-            return true;  // Admin login successful
+            return true;
         }
 
-        // Regular user authentication using the repository
         User storedUser = userRepository.findByUsername(user.getUsername());
         if (storedUser != null && storedUser.getPassword().equals(user.getPassword())) {
-            return true;  // Regular user login successful
+            return true;
         }
 
-        // If no user or incorrect credentials
-        return false;  // Login failed
+        return false;
     }
 
 

@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable, tap} from 'rxjs';
-import {Product} from '../../modules/product';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +12,7 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   register(user: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/auth/register`, user); // 👈 /auth/register
+    return this.http.post(`${this.apiUrl}/auth/register`, user);
   }
 
   login(credentials: { username: string, password: string }): Observable<any> {
@@ -38,5 +37,13 @@ export class AuthService {
     return user ? JSON.parse(user) : null;
   }
 
+
+  getDashboardStats(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/admin/dashboard-stats`);
+  }
+
+  submitOrder(orderData: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/orders`, orderData);
+  }
 }
 
