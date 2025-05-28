@@ -41,7 +41,7 @@ public class AuthController {
         if (isAuthenticated) {
             String role = "admin".equals(user.getUsername()) ? "ADMIN" : "USER";
 
-            // ✅ Return JSON with role and success
+            //  Return JSON with role and success
             return ResponseEntity.ok().body(Map.of(
                     "success", true,
                     "role", role
