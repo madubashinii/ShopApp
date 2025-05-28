@@ -6,6 +6,7 @@ import {RouterLink, RouterLinkActive} from '@angular/router';
 
 @Component({
   selector: 'app-cart',
+  standalone: true,
   imports: [
     CommonModule,
     RouterLink,

@@ -49,6 +49,10 @@ export class CartService {
     this.computeCartTotals();
   }
 
+  getCartItemsValue(): CartItem[] {
+    return [...this.cartItems];
+  }
+
   getCartItems() {
     return this.productList.asObservable();
   }
